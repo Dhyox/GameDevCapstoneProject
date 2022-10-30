@@ -9,8 +9,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        multiplier = 1;
-        coin = 0;
+        multiplier = PlayerPrefs.GetInt("multiplier",1);
+        coin = PlayerPrefs.GetInt("coin", 0);
+    }
+
+    public void ResetProgress()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
 }
