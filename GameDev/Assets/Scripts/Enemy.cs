@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public static int HP = 10;
+    public static int CHP = EnemySpawner.HP * GameManager.Level;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +14,10 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(HP == 0)
+        if(CHP == 0)
         {
-            Destroy(gameObject);
+            EnemySpawner.EnemyAlive = 0;
+            GameObject.Destroy(gameObject);
         }
     }
 }

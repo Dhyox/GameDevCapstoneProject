@@ -6,6 +6,7 @@ public class Game : MonoBehaviour
 {
     public Text textCoin;
     public Text textMulti;
+    public Text textLevel;
 
     public void Increment()
     {
@@ -15,7 +16,7 @@ public class Game : MonoBehaviour
 
     public void Hit()
     {
-        Enemy.HP -= GameManager.multiplier;
+        Enemy.CHP -= GameManager.multiplier;
     }
 
     public void Buy(int num)
@@ -46,7 +47,11 @@ public class Game : MonoBehaviour
     public void Update()
     {
         textCoin.text = "Coins: " + GameManager.coin;
-        textMulti.text = "Multiplier: " + GameManager.multiplier + "x";
-        
+        textMulti.text = "Damage: " + GameManager.multiplier + "/Hit";
+        textLevel.text = "Level: " + GameManager.Level;
+        if (EnemySpawner.EnemyAlive==0)
+        {
+            Increment();
+        }
     }
 }
