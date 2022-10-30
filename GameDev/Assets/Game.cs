@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    public Text ui;
+    public Text textCoin;
+    public Text textMulti;
 
     public void Increment()
     {
@@ -32,6 +33,7 @@ public class Game : MonoBehaviour
 
     public void Update()
     {
-        ui.text = "Coin: " + GameManager.coin;
+        textCoin.text = "Coins: " + GameManager.coin;
+        textMulti.text = "Multiplier: " + GameManager.multiplier + "x";        
     }
 }
