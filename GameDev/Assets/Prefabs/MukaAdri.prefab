@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7403431404480494605}
   - component: {fileID: 7403431404480494603}
   m_Layer: 5
-  m_Name: ObserveFace
+  m_Name: MukaAdri
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0227cad90eea72448ee48230711ab7c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31b6fdca486109044ade1e20245a51f6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

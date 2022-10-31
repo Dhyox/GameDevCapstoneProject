@@ -7,8 +7,9 @@ public class Game : MonoBehaviour
     public Text textCoin;
     public Text textMulti;
     public Text textLevel;
-
-    public void Increment()
+    public Slider HPBar;
+    
+    public static void Increment()
     {
         GameManager.coin += GameManager.multiplier;
         PlayerPrefs.SetInt("coin", GameManager.coin);
@@ -49,9 +50,6 @@ public class Game : MonoBehaviour
         textCoin.text = "Coins: " + GameManager.coin;
         textMulti.text = "Damage: " + GameManager.multiplier + "/Hit";
         textLevel.text = "Level: " + GameManager.Level;
-        if (EnemySpawner.EnemyAlive==0)
-        {
-            Increment();
-        }
+        HPBar.value = (float)Enemy.CHP / (float)Enemy.MaxHP;
     }
 }
