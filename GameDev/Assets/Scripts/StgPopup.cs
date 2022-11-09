@@ -4,19 +4,34 @@ using UnityEngine;
 
 public class StgPopup : MonoBehaviour
 {
-    public Canvas canvas;
-    public bool a = false;
-    public void PopUp()
+    public Canvas SettingMenu;
+    public Canvas BuyMenu;
+    bool a = false;
+    bool b = false;
+    public void PopUpSetting()
     {
         if (a == false)
         {
-            canvas.enabled = true;
+            SettingMenu.enabled = true;
             a = true;
         }
         else if (a == true)
         {
-            canvas.enabled = false;
+            SettingMenu.enabled = false;
             a = false;
+        }
+    }
+    public void PopUpBuy()
+    {
+        if (b == false)
+        {
+            BuyMenu.enabled = true;
+            b = true;
+        }
+        else if (b == true)
+        {
+            BuyMenu.enabled = false;
+            b = false;
         }
     }
 }
