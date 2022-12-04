@@ -6,9 +6,12 @@ public class Enemy : MonoBehaviour
 {
     public static int CHP;
     public static int MaxHP;
+    private Animator animate;
+    
     // Start is called before the first frame update
     void Start()
     {
+        animate= gameObject.GetComponent<Animator>();
         CHP = EnemySpawner.HP * GameManager.Level;
         MaxHP = CHP;
     }

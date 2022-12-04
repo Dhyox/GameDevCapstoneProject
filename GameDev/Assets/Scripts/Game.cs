@@ -18,6 +18,7 @@ public class Game : MonoBehaviour
     public void Hit()
     {
         Enemy.CHP -= GameManager.multiplier;
+        // Debug.Log("HIT");
     }
 
     public void Buy(int num)
