@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         multiplier = PlayerPrefs.GetInt("multiplier",1);
-        coin = PlayerPrefs.GetInt("coin", 1000);
+        coin = PlayerPrefs.GetInt("coin", 0);
         Level = PlayerPrefs.GetInt("Level", 1);
         EnemySpawner.EnemyAlive = 1;
     }
