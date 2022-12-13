@@ -1426,6 +1426,8 @@ MonoBehaviour:
   textMulti: {fileID: 121179610}
   textLevel: {fileID: 64703662}
   HPBar: {fileID: 142999593}
+  BaseAtkPrice: {fileID: 771423604}
+  BaseAtkPlus: {fileID: 1594561183}
 --- !u!1 &687683526
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1585,7 @@ GameObject:
   - component: {fileID: 771423605}
   - component: {fileID: 771423604}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2616,7 +2618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1460579928
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2960,7 +2962,7 @@ GameObject:
   - component: {fileID: 1659527287}
   - component: {fileID: 1659527286}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: +?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3018,7 +3020,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Increase Damage +1
+  m_Text: Increase Damage
 --- !u!222 &1659527287
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3262,7 +3264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360, y: 63.176}
+  m_AnchoredPosition: {x: 360, y: 52}
   m_SizeDelta: {x: 301.9398, y: 126.3517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745215753

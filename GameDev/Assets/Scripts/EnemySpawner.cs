@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] theEnemy;
     public Transform spawnPoints;
     public Transform Parent;
-    public static int HP=10;
+    public static int HP;
     public static int EnemyAlive;
     // Start is called before the first frame update
 
@@ -28,9 +28,9 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EnemyAlive == 0)
+        if (EnemyAlive == 0)        //Cek musuh mati / ngga
         {
-            GameManager.Level++;
+            GameManager.Level++;        //Level enemy nambah
             Spawn(theEnemy[Random.Range(0, theEnemy.Length)]);
         }
     }

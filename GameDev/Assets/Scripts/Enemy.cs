@@ -12,14 +12,14 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         animate= gameObject.GetComponent<Animator>();
-        CHP = EnemySpawner.HP * GameManager.Level;
+        CHP = EnemySpawner.HP + GameManager.Level-1;
         MaxHP = CHP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(CHP <= 0)
+        if(CHP <= 0)                //Ngecek musuh mati ato ngga
         {
             EnemySpawner.EnemyAlive = 0;
             Game.Increment();
