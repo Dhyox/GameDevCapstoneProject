@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 8473033613631935106}
   m_Layer: 0
   m_Name: Tetanus
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -552,6 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd86194fe172854e9e4d3abe27cb69b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Clostridium Tetani
 --- !u!1 &1019691981991281493
 GameObject:
   m_ObjectHideFlags: 0

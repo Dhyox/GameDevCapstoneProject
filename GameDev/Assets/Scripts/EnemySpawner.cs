@@ -10,10 +10,12 @@ public class EnemySpawner : MonoBehaviour
     public Transform Parent;
     public static int HP;
     public static int EnemyAlive;
+    Game game;
     // Start is called before the first frame update
 
     void Start()
     {
+        game = FindObjectOfType<Game>();
         Spawn(theEnemy[Random.Range(0,theEnemy.Length)]);
         // Instantiate(enemy1, new Vector3(0, 227, 0), Quaternion.identity);
         // int randSpawPoint = Random.Range(0, spawnPoints.Length);
@@ -23,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Instantiate(enemy, spawnPoints.position, Quaternion.identity, Parent);
         EnemyAlive = 1;
+        game.DisplayName(enemy.GetComponent<Enemy>().Name);
         // GameObject newEnemy = Instantiate(enemy, new Vector3(0, 0, 0), Quaternion.identity);
     }
     // Update is called once per frame

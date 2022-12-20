@@ -10,7 +10,12 @@ public class Game : MonoBehaviour
     public Slider HPBar;
     public Text BaseAtkPrice;
     public Text BaseAtkPlus;
-    
+    public Text enemyName;
+
+    public void DisplayName(string Name)
+    {
+        enemyName.text = Name;
+    }
     public static void Increment() //Drop Coin Enemy
     {
         GameManager.coin += GameManager.Level;
@@ -46,11 +51,12 @@ public class Game : MonoBehaviour
 
     public void Update()
     {
-        textCoin.text = "Coins: " + GameManager.coin;
+        textCoin.text = "$" + GameManager.coin;
         textMulti.text = "Damage: " + GameManager.multiplier + "/Hit";
         textLevel.text = "Level: " + GameManager.Level;
         HPBar.value = (float)Enemy.CHP / (float)Enemy.MaxHP;
         BaseAtkPrice.text = "$" + GameManager.BuyPrice1;
         BaseAtkPlus.text = "+" + (GameManager.NextBaseAtk-GameManager.multiplier);
+        
     }
 }

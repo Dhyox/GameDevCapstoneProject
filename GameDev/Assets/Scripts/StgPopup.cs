@@ -6,8 +6,10 @@ public class StgPopup : MonoBehaviour
 {
     public Canvas SettingMenu;
     public Canvas BuyMenu;
+    public Canvas IndexMenu;
     bool a = false;
     bool b = false;
+    bool c = false;
     public void PopUpSetting()
     {
         if (a == false)
@@ -32,6 +34,19 @@ public class StgPopup : MonoBehaviour
         {
             BuyMenu.enabled = false;
             b = false;
+        }
+    }
+    public void PopUpIndex()
+    {
+        if (c == false)
+        {
+            IndexMenu.enabled = true;
+            c = true;
+        }
+        else if (c == true)
+        {
+            IndexMenu.enabled = false;
+            c = false;
         }
     }
 }
