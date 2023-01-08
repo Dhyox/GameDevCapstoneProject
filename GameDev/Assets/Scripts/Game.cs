@@ -51,11 +51,11 @@ public class Game : MonoBehaviour
 
     public void Update()
     {
-        textCoin.text = "$" + GameManager.coin;
+        textCoin.text = "" + GameManager.coin;
         textMulti.text = "Damage: " + GameManager.multiplier + "/Hit";
         textLevel.text = "Level: " + GameManager.Level;
         HPBar.value = (float)Enemy.CHP / (float)Enemy.MaxHP;
-        BaseAtkPrice.text = "$" + GameManager.BuyPrice1;
+        BaseAtkPrice.text = "$"+ GameManager.BuyPrice1;
         BaseAtkPlus.text = "+" + (GameManager.NextBaseAtk-GameManager.multiplier);
         
     }
