@@ -11,11 +11,14 @@ public class Player : MonoBehaviour
         {
             gameObject.transform.localScale = new Vector3(-1, 1, 1);
             facingRight = false;
+            AudioManager.instance.PlaySound("Sword", SoundOutput.sfx);
+
         }
         else
         {
             gameObject.transform.localScale = new Vector3(1, 1, 1);
             facingRight = true;
+            AudioManager.instance.PlaySound("Sword", SoundOutput.sfx);
         }
         
     }
