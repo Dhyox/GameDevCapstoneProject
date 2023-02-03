@@ -12,10 +12,21 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(GameManager.Level % 10 == 0)
+        {
+            CHP = (EnemySpawner.HP * 5) + GameManager.Level - 1;
+            MaxHP = CHP;
+        }
+        else
+        {
+            CHP = EnemySpawner.HP + GameManager.Level - 1;
+            MaxHP = CHP;
+        }
+
         PlayerPrefs.SetInt(Name, 1); //Ini rencananya buat ngecek udah pernah ketemu musuhnya ato belom, blm selesai dibuat
         animate= gameObject.GetComponent<Animator>();
-        CHP = EnemySpawner.HP + GameManager.Level-1;
-        MaxHP = CHP;
+        //CHP = EnemySpawner.HP + GameManager.Level-1;
+        //MaxHP = CHP;
     }
 
     // Update is called once per frame

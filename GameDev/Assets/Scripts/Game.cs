@@ -12,13 +12,37 @@ public class Game : MonoBehaviour
     public Text BaseAtkPlus;
     public Text enemyName;
 
+    public Text test1;
+    public float displayTime = 2.0f;
+    public RectTransform container;
+
+    private void Start()
+    {
+        test1.gameObject.SetActive(false);
+    }
+
+    public void OnButtonClick()
+    {
+        test1.gameObject.SetActive(true);
+        test1.rectTransform.anchoredPosition = new Vector2(
+            Random.Range(-container.sizeDelta.x / 2, container.sizeDelta.x / 2),
+            Random.Range(-container.sizeDelta.y / 2, container.sizeDelta.y / 2)
+        );
+        Invoke("HideText", displayTime);
+    }
+
+    public void HideText()
+    {
+        test1.gameObject.SetActive(false);
+    }
+
     public void DisplayName(string Name)
     {
         enemyName.text = Name;
     }
     public static void Increment() //Drop Coin Enemy
     {
-        GameManager.coin += GameManager.Level;
+        GameManager.coin += (GameManager.Level / 2);
         PlayerPrefs.SetInt("coin", GameManager.coin);
     }
 
@@ -52,7 +76,8 @@ public class Game : MonoBehaviour
     public void Update()
     {
         textCoin.text = "" + GameManager.coin;
-        textMulti.text = "Damage: " + GameManager.multiplier + "/Hit";
+        //textMulti.text = "Damage: " + GameManager.multiplier + "/Hit";
+        textMulti.text = "" + GameManager.multiplier;
         textLevel.text = "Level: " + GameManager.Level;
         HPBar.value = (float)Enemy.CHP / (float)Enemy.MaxHP;
         BaseAtkPrice.text = "$"+ GameManager.BuyPrice1;
