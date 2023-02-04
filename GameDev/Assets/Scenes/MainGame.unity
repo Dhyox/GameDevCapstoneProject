@@ -4090,7 +4090,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124458818}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -6390,6 +6390,7 @@ GameObject:
   - component: {fileID: 1745215755}
   - component: {fileID: 1745215754}
   - component: {fileID: 1745215753}
+  - component: {fileID: 1745215756}
   m_Layer: 5
   m_Name: Buy Menu 1
   m_TagString: Untagged
@@ -6512,6 +6513,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745215751}
   m_CullTransparentMesh: 1
+--- !u!114 &1745215756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745215751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d747e973f106f3b44a16687f39a0d931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1748021042
 GameObject:
   m_ObjectHideFlags: 0
