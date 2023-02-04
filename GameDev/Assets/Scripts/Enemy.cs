@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     {
         if(GameManager.Level % 10 == 0)
         {
-            CHP = (EnemySpawner.HP * 5) + GameManager.Level - 1;
+            CHP = (EnemySpawner.HP * 10) + GameManager.Level - 1;
             MaxHP = CHP;
         }
         else
@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
             MaxHP = CHP;
         }
 
-        PlayerPrefs.SetInt(Name, 1); //Ini rencananya buat ngecek udah pernah ketemu musuhnya ato belom, blm selesai dibuat
+        //PlayerPrefs.SetInt(Name, 1); //Ini rencananya buat ngecek udah pernah ketemu musuhnya ato belom, blm selesai dibuat
         animate= gameObject.GetComponent<Animator>();
         //CHP = EnemySpawner.HP + GameManager.Level-1;
         //MaxHP = CHP;
