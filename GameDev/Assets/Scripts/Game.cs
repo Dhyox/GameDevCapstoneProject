@@ -94,6 +94,7 @@ public class Game : MonoBehaviour
             GameManager.BuyPrice1 = GameManager.OldBuyPrice1 + GameManager.NextBaseAtk;
             GameManager.OldBuyPrice1 = GameManager.BuyPrice1;
             GameManager.NextBaseAtk = GameManager.multiplier+2;
+            
         }
         if (num == 2 && GameManager.coin >= GameManager.BuyPrice2)
         {
@@ -103,7 +104,8 @@ public class Game : MonoBehaviour
             PlayerPrefs.SetFloat("critrate", GameManager.critrate);
             GameManager.BuyPrice2 = GameManager.OldBuyPrice2 + (GameManager.OldBuyPrice2 / 2);
             GameManager.OldBuyPrice2 = GameManager.BuyPrice2;
-            GameManager.nextcritrate = GameManager.critrate + 0.005f; 
+            GameManager.nextcritrate = GameManager.critrate + 0.005f;
+            
         }
     }
 
