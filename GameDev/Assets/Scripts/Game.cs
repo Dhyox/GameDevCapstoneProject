@@ -27,6 +27,9 @@ public class Game : MonoBehaviour
     public Text CritText;
     public float CritRate = GameManager.critrate;
 
+    public Animator attackAnim;
+
+
     private void Start()
     {
         test1.gameObject.SetActive(false);
@@ -46,7 +49,13 @@ public class Game : MonoBehaviour
             Invoke("HideCrit", 0.4f);
         }
         //Damage biasa
+        Hit();
+        AudioManager.instance.PlaySound("Sword", SoundOutput.sfx);
         test1.gameObject.SetActive(true);
+
+        attackAnim.Play("Player_attack");
+        //attackAnim.PlayAttack();
+
         test1.rectTransform.anchoredPosition = new Vector2(
             Random.Range(-container.sizeDelta.x / 2, container.sizeDelta.x / 2),
             Random.Range(-container.sizeDelta.y / 2, container.sizeDelta.y / 2)
