@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         multiplier = PlayerPrefs.GetInt("multiplier",1);
-        crit = PlayerPrefs.GetInt("crit", multiplier * 5);
+        crit = PlayerPrefs.GetInt("crit", (multiplier * 2) - (multiplier/2) );
         critrate = PlayerPrefs.GetFloat("critrate", 0.005f);
         NextBaseAtk = multiplier + 1;
         nextcritrate = critrate + 0.005f;

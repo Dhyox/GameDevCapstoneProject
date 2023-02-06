@@ -94,7 +94,7 @@ public class Game : MonoBehaviour
             GameManager.BuyPrice1 = GameManager.OldBuyPrice1 + GameManager.NextBaseAtk;
             GameManager.OldBuyPrice1 = GameManager.BuyPrice1;
             GameManager.NextBaseAtk = GameManager.multiplier+2;
-            
+            GameManager.crit = (GameManager.multiplier * 2) - (GameManager.multiplier / 2);
         }
         if (num == 2 && GameManager.coin >= GameManager.BuyPrice2)
         {
